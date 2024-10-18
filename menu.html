@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Tablas de Multiplicar</title>
+    <link rel="stylesheet" href="estilas.css">
+</head>
+<body>
+    <header>
+        <h1>Generador de Tablas de Multiplicar</h1>
+        <div class="menu" onclick="toggleMenu()">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+        </div>
+        <nav id="navMenu" class="nav-hidden">
+            <a href="index.html">Generador de Tablas de Multiplicar</a>
+            <a href="inventarios.html">Sistema de Generación de Inventarios</a>
+            <a href="adivinar.html">Sistema de Adivinar el Número</a>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        
+        <h2>Generador de Tablas de Multiplicar</h2>
+        <input type="number" id="numero" class="form-control mb-3" placeholder="Ingrese un número">
+        <button class="btn btn-primary btn-block" onclick="generarTabla()">Generar Tabla</button>
+        <div id="tablaResultado"></div>
+    </div>
+
+    <script>
+        function generarTabla() {
+            const numero = document.getElementById("numero").value;
+            let resultadoHTML = `<h3>Tabla de multiplicar del ${numero}</h3><table class="table"><tr><th>Multiplicación</th><th>Resultado</th></tr>`;
+            for (let i = 1; i <= 10; i++) {
+                resultadoHTML += `<tr><td>${numero} x ${i}</td><td>${numero * i}</td></tr>`;
+            }
+            resultadoHTML += `</table>`;
+            document.getElementById("tablaResultado").innerHTML = resultadoHTML;
+        }
+
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("nav-hidden");
+        }
+
+    </script>
+</body>
+</html>

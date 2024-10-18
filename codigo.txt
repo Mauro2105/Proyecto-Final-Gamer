@@ -1,0 +1,26 @@
+832
+			<body></body>
+			<style>
+				#collectchat-launcher-frame {
+					position: fixed !important;
+					bottom: 20px !important;
+					right: 20px !important;
+					z-index: 2147483647 !important;
+				}
+			</style>
+			<script>
+				(function(w, d) { 
+					w.CollectId = "670f1da8f4bc76248fc4fef7"; 
+					var h = d.head || d.getElementsByTagName("head")[0]; 
+					var s = d.createElement("script"); 
+					s.setAttribute("type", "text/javascript"); 
+					s.async=true; 
+					s.setAttribute("src", "https://collectcdn.com/launcher.js"); 
+					h.appendChild(s); 
+				})(window, document);
+			</script>
+		</div>
+	</body>
+
+
+<li class="nav-item"> <a class="nav-link link text-black display-4" href="http://127.0.0.1:5500/doc.html">Inicio ▤</a> </li> <li class="nav-item"> <a class="nav-link link text-black display-4" href="menu.html" target="_blank" >Juegos 💻</a> </li> <li class="nav-item"> <a class="nav-link link text-black display-4" href="carrito.html" target="_blank" >Carrito 🛒</a> </li>

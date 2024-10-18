@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Generación de Inventarios</title>
+    <link rel="stylesheet" href="estilas.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Generación de Inventarios</h1>
+        <div class="menu" onclick="toggleMenu()">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+        </div>
+        <nav id="navMenu" class="nav-hidden">
+            <a href="menu.html">Generador de Tablas de Multiplicar</a>
+            <a href="inventarios.html">Sistema de Generación de Inventarios</a>
+            <a href="adivinar.html">Sistema de Adivinar el Número</a>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <button class="btn btn-secondary" onclick="volverAtras()">Volver Atrás</button>
+        <h2>Inventario de Productos</h2>
+        <form id="formInventario" onsubmit="agregarProducto(event)">
+            <input type="text" id="producto" class="form-control mb-3" placeholder="Ingrese el nombre del producto" required>
+            <input type="number" id="cantidad" class="form-control mb-3" placeholder="Ingrese la cantidad" required>
+            <button type="submit" class="btn btn-primary">Agregar Producto</button>
+        </form>
+        <table id="tablaInventario" class="table mt-4">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla"></tbody>
+        </table>
+    </div>
+
+    <script>
+        function agregarProducto(event) {
+            event.preventDefault();
+            const producto = document.getElementById("producto").value;
+            const cantidad = document.getElementById("cantidad").value;
+
+            const tbody = document.getElementById("cuerpoTabla");
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${producto}</td>
+                <td>${cantidad}</td>
+                <td><button onclick="eliminarProducto(this)">Eliminar</button></td>
+            `;
+            tbody.appendChild(fila);
+
+            document.getElementById("formInventario").reset();
+        }
+
+        function eliminarProducto(boton) {
+            const fila = boton.parentElement.parentElement;
+            fila.remove();
+        }
+
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("nav-hidden");
+        }
+
+        function volverAtras() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

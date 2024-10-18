@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eminen Network</title>
+    <link rel="stylesheet" href="estiloss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://i.pinimg.com/564x/2e/47/c4/2e47c4fdbf5e4699e90f891ec55a3f9a.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="particles"></div>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-network-wired"></i> Eminen Network</div>
+            <ul>
+                <li><a href="#" id="homeLink"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#" id="loginLink"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a></li>
+                <li><a href="#" id="registerLink"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div id="welcomePage" class="form">
+            <h1>Bienvenido a Eminen Network</h1>
+            <p>Conecta, comparte y crece con nuestra comunidad global.</p>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Comunidad Global</h3>
+                    <p>Conéctate con personas de todo el mundo</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Seguridad Avanzada</h3>
+                    <p>Tu información siempre está protegida</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Crecimiento Personal</h3>
+                    <p>Aprende y crece con nuestra red</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Comunicación Instantánea</h3>
+                    <p>Chatea en tiempo real con tus contactos</p>
+                </div>
+            </div>
+        </div>
+        <div id="loginPage" class="form" style="display: none;">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Nombre de usuario" required>
+                <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <p id="loginMessage"></p>
+        </div>
+        <div id="registerPage" class="form" style="display: none;">
+            <h2>Registrarse</h2>
+            <form id="registerForm">
+                <input type="text" id="registerUsername" placeholder="Nombre de usuario" required>
+                <input type="email" id="registerEmail" placeholder="Correo electrónico" required>
+                <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+            <p id="registerMessage"></p>
+            <button id="backButton" class="secondary-button">Volver</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Eminen Network. Todos los derechos reservados.</p>
+    </footer>
+    <script src="formato.js"></script>
+</body>
+</html>
